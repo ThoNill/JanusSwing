@@ -6,7 +6,7 @@ import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.GridLayout;
 import java.util.List;
-import java.util.Vector;
+import java.util.List; import java.util.ArrayList;
 
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -194,7 +194,7 @@ public class DefaultGuiElementBuilder implements GuiElementBuilder {
 	}
 
 	private GuiComponent createTableConnector(Element elem, Action a) {
-		List<TableColumnDescription> columnDescriptions = new Vector<>();
+		List<TableColumnDescription> columnDescriptions = new ArrayList<>();
 		boolean withColumns = false;
 		for (Element e : elem.getChildren()) {
 			if ("COLUMN".equals(e.getName())) {

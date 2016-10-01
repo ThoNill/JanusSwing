@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import javax.swing.JFrame;
 
+import org.apache.log4j.Logger;
 import org.janus.binder.BindWalker;
 import org.janus.binder.gui.GuiBuilderWalker;
 import org.janus.builder.BuilderWalker;
@@ -21,6 +22,7 @@ import org.junit.Test;
 import toni.druck.xml.XMLDocumentLoader;
 
 public class Gui {
+    private static final Logger LOG = Logger.getLogger(Gui.class);
 
 	@Test
 	public void loadAndBind() {
@@ -47,7 +49,7 @@ public class Gui {
 			assertTrue(comp instanceof JFrameConnector);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error("Fehler",e);;
 			Assert.fail("Exception " + e.getMessage());
 		}
 	}	
@@ -89,7 +91,7 @@ public class Gui {
 			
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error("Fehler",e);;
 			Assert.fail("Exception " + e.getMessage());
 		}
 	}	

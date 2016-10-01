@@ -9,6 +9,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JComponent;
 import javax.swing.KeyStroke;
 
+import org.apache.log4j.Logger;
 import org.janus.actions.Action;
 import org.janus.data.DataContext;
 import org.janus.dict.actions.ActionDictionary;
@@ -16,6 +17,8 @@ import org.janus.gui.enums.KeyEventType;
 import org.janus.gui.enums.MouseEvents;
 
 public class EventActionBinder extends MouseAdapter implements ActionListener {
+    private static final Logger LOG = Logger.getLogger(EventActionBinder.class);
+    
 	private String eventName;
 	private String actionName;
 	private Action action;
@@ -33,9 +36,8 @@ public class EventActionBinder extends MouseAdapter implements ActionListener {
 		try {
 			keyEvent = KeyEventType.valueOf(eventName);
 		} catch (Exception ex) {
-
+		    LOG.error("Fehler beim registrieren eines Key",ex);
 		}
-		;
 		if (keyEvent != null) {
 			component
 					.registerKeyboardAction(this, keyEvent.name(), KeyStroke
@@ -47,9 +49,8 @@ public class EventActionBinder extends MouseAdapter implements ActionListener {
 		try {
 			mouseEvent = MouseEvents.valueOf(eventName);
 		} catch (Exception ex) {
-
+		    LOG.error("Fehler beim registrieren eines MouseEvents",ex);
 		}
-		;
 		if (mouseEvent != null) {
 			component.addMouseListener(this);
 

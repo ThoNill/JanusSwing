@@ -4,7 +4,7 @@ import java.awt.Component;
 import java.awt.Container;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Vector;
+import java.util.List; import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;

@@ -2,7 +2,7 @@ package builder.test;
 
 import javax.swing.JFrame;
 
-
+import org.apache.log4j.Logger;
 import org.janus.appbuilder.AppBuilder;
 import org.janus.gui.basis.JanusApplication;
 import org.janus.gui.basis.JanusPage;
@@ -14,6 +14,7 @@ import org.janus.gui.swing.builder.DefaultGuiElementBuilder;
 import org.junit.Assert;
 
 public class TestSwingApp {
+    private static final Logger LOG = Logger.getLogger(TestSwingApp.class);
 
 	public TestSwingApp() {
 		// TODO Auto-generated constructor stub
@@ -41,7 +42,7 @@ public class TestSwingApp {
 			frame.setSize(500,500);
 			frame.setVisible(true);
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error("Fehler",e);;
 			Assert.fail("Exception " + e.getMessage());
 		}
 	}	

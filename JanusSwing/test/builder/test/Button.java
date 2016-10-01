@@ -1,10 +1,12 @@
 package builder.test;
 
+import org.apache.log4j.Logger;
 import org.janus.gui.builder.GuiElementBuilder;
 import org.janus.gui.swing.builder.DefaultGuiElementBuilder;
 import org.junit.Assert;
 
 public class Button extends TestSinglePage {
+    private static final Logger LOG = Logger.getLogger(Button.class);
 
 	public Button() {
 		// TODO Auto-generated constructor stub
@@ -18,7 +20,7 @@ public class Button extends TestSinglePage {
 			
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error("Fehler",e);;
 			Assert.fail("Exception " + e.getMessage());
 		}
 	}

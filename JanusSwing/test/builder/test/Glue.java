@@ -1,10 +1,12 @@
 package builder.test;
 
+import org.apache.log4j.Logger;
 import org.janus.gui.builder.GuiElementBuilder;
 import org.janus.gui.swing.builder.DefaultGuiElementBuilder;
 import org.junit.Assert;
 
 public class Glue extends TestSinglePage{
+    private static final Logger LOG = Logger.getLogger(Glue.class);
 
 	public Glue() {
 		// TODO Auto-generated constructor stub
@@ -19,7 +21,7 @@ public class Glue extends TestSinglePage{
 			
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error("Fehler",e);;
 			Assert.fail("Exception " + e.getMessage());
 		}
 	}	

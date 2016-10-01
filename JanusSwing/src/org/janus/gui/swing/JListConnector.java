@@ -10,6 +10,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import org.apache.log4j.Logger;
 import org.janus.gui.enums.GuiType;
 import org.janus.table.ExtendedTableModel;
 
@@ -22,6 +23,7 @@ import org.janus.table.ExtendedTableModel;
  */
 public class JListConnector extends SwingTableModelConnector implements
 		ListSelectionListener {
+    private static final Logger LOG = Logger.getLogger(JListConnector.class);
 
 	/**
 	 * Constructor declaration
@@ -83,7 +85,7 @@ public class JListConnector extends SwingTableModelConnector implements
 				//getList().setSelectedIndex(tm.getCurrentRow());
 			}
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			LOG.error("Fehler",ex);;
 		}
 	}
 

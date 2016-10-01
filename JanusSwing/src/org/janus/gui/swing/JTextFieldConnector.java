@@ -20,11 +20,15 @@ import javax.swing.KeyStroke;
 import javax.swing.border.Border;
 import javax.swing.text.JTextComponent;
 
+import org.apache.log4j.Logger;
 import org.janus.gui.enums.GuiType;
 import org.janus.gui.enums.KeyEventType;
 
 public class JTextFieldConnector extends SwingValueConnector implements
 		java.awt.event.ActionListener, FocusListener {
+    private static final Logger LOG = Logger.getLogger(JTextFieldConnector.class);
+    
+    
 	private Color lastColor;
 	private String lastValue;
 
@@ -117,7 +121,7 @@ public class JTextFieldConnector extends SwingValueConnector implements
 			Transferable content = cb.getContents(null);
 			s = (String) content.getTransferData(DataFlavor.stringFlavor);
 		} catch (Exception ex) {
-			// DebugAssistent.log(ex);
+		    LOG.error("Fehler beim uebertragen vom Clipboard",ex);
 		}
 		return s;
 	}

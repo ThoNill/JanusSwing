@@ -1,20 +1,20 @@
 package org.janus.gui.swing;
 
-import java.util.Vector;
+import java.util.List; import java.util.ArrayList;
 
 import javax.swing.JComponent;
 
 import org.janus.data.DataContext;
 
 public class EventActionBinderList {
-	Vector<EventActionBinder> list = new Vector<>();
+	List<EventActionBinder> list = new ArrayList<>();
 
 	public EventActionBinderList() {
 		
 	}
 
 	public void addElement(EventActionBinder obj) {
-		list.addElement(obj);
+		list.add(obj);
 	}
 
 	public void register(JComponent component) {

@@ -10,7 +10,7 @@ import java.beans.PropertyChangeListener;
 import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
-import java.util.Vector;
+import java.util.List; import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -41,7 +41,7 @@ public abstract class SwingBasisConnector implements PropertyChangeListener,
 	private GuiType type;
 	protected NamedActionValue value;
 	protected DataContext context;
-	private Vector<GuiComponent> childComponents = null;
+	private List<GuiComponent> childComponents = null;
 	private EventActionBinderList eventActionList;
 
 	public SwingBasisConnector(GuiType type, Component component) {
@@ -53,7 +53,7 @@ public abstract class SwingBasisConnector implements PropertyChangeListener,
 		this.type = type;
 		this.component = component;
 
-		if (!(component != null && component instanceof JMenu)) {
+		if (!(component instanceof JMenu)) {
 			component.addPropertyChangeListener(this);
 		}
 	}
@@ -121,6 +121,8 @@ public abstract class SwingBasisConnector implements PropertyChangeListener,
 		case Y:
 			component.setLocation(component.getX(), (int) value);
 			break;
+		default:
+		    break;
 		}
 	}
 
@@ -409,7 +411,7 @@ public abstract class SwingBasisConnector implements PropertyChangeListener,
 		}
 		
 		if (childComponents == null) {
-			childComponents = new Vector<>();
+			childComponents = new ArrayList<>();
 		}
 		childComponents.add(comp);
 

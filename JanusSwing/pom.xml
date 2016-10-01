@@ -66,6 +66,28 @@
 		</testResources>
 
 		<plugins>
+		
+		<!-- 
+			<plugin>
+				<groupId>thomas.nill</groupId>
+				<artifactId>ClassExtractor-maven-plugin</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<configuration>
+				<groups>thomas.nill</groups>
+				<interfaceList>org.janus.actions.Action</interfaceList>
+				</configuration>
+				<executions>
+				
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>touch</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			-->
+		
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
