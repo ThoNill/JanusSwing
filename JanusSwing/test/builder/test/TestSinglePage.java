@@ -1,7 +1,6 @@
 package builder.test;
 
 import static org.junit.Assert.assertNotNull;
-
 import static org.junit.Assert.assertTrue;
 
 import javax.swing.JFrame;

@@ -9,7 +9,7 @@ public class Glue extends TestSinglePage{
     private static final Logger LOG = Logger.getLogger(Glue.class);
 
 	public Glue() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static void main(String args[]) {

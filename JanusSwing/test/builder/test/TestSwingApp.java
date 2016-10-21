@@ -17,7 +17,7 @@ public class TestSwingApp {
     private static final Logger LOG = Logger.getLogger(TestSwingApp.class);
 
 	public TestSwingApp() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	

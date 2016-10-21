@@ -3,7 +3,6 @@
 package org.janus.gui.swing;
 
 import java.awt.Component;
-
 import java.io.Serializable;
 import java.util.List;
 

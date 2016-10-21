@@ -5,10 +5,6 @@ package org.janus.gui.swing;
 import java.awt.Component;
 import java.io.Serializable;
 
-
-
-
-
 import javax.swing.JLabel;
 
 import org.janus.gui.enums.GuiType;

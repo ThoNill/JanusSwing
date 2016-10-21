@@ -6,6 +6,7 @@ import java.awt.Component;
 import java.io.Serializable;
 
 import javax.swing.JComponent;
+
 import org.janus.gui.enums.GuiType;
 
 /**

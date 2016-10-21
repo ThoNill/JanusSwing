@@ -9,7 +9,7 @@ public class Button extends TestSinglePage {
     private static final Logger LOG = Logger.getLogger(Button.class);
 
 	public Button() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static void main(String args[]) {

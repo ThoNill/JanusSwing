@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.io.Serializable;
 
 import javax.swing.JMenu;
+
 import org.janus.gui.enums.GuiType;
 
 /**

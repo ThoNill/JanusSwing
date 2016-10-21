@@ -9,7 +9,7 @@ public class Tabelle extends TestSinglePage{
     private static final Logger LOG = Logger.getLogger(Tabelle.class);
 
 	public Tabelle() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static void main(String args[]) {

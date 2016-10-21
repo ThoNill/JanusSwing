@@ -1,6 +1,7 @@
 package org.janus.gui.swing;
 
 import java.io.Serializable;
+
 import javax.swing.JPanel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;

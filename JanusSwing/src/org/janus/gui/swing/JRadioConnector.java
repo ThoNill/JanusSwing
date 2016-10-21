@@ -65,7 +65,7 @@ public class JRadioConnector extends SwingTableModelConnector implements
 
 	@Override
 	public void valueChanged(ListSelectionEvent ev) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
